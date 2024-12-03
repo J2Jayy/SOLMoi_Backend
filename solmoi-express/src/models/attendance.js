@@ -1,8 +1,10 @@
 //models/attendance.js
-import { DataTypes } from 'sequelize';
-import sequelize from '../config/db.js';
+import { DataTypes } from "sequelize";
+import sequelize from "../config/db.js";
 
-const Attendance = sequelize.define('Attendance', {
+const Attendance = sequelize.define(
+  "Attendance",
+  {
     attendance_date: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -12,9 +14,11 @@ const Attendance = sequelize.define('Attendance', {
       allowNull: true,
       defaultValue: 0,
     },
-  }, {
-    tableName: 'Attendance',
+  },
+  {
+    tableName: "Attendance",
     freezeTableName: true,
-  });
+  }
+);
 
 export default Attendance;
